@@ -78,7 +78,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
     
 3)liste des acteurs pour un film donné:
  
-    -SELECT `first_name`, `last_name` FROM actors INNER JOIN actor_movies ON actors.id = actor_movies.id_actors INNER JOIN Movies ON Movies.id =                             actor_movies.id_movies WHERE Movies.title='thor';
+    -SELECT `first_name`, `last_name` FROM actors INNER JOIN actor_movies ON actors.id = actor_movies.id_actors INNER JOIN Movies ON Movies.id  =actor_movies.id_movies WHERE Movies.title='thor';
     
 4) liste des films pour un acteur donné:
 
