@@ -11,7 +11,7 @@
     
 2) Nom, prénom, age acteurs de + de 30 ans par odre alphabétique:
     
-    -SELECT `first_name`, `last_name`, `date of birth` FROM `actors` WHERE `date of birth` <= '1992-01-01' ORDER BY `last_name`;
+    -SELECT first_name, last_name, (YEAR(NOW())) - YEAR (date_of_birth) AS AGE FROM actors HAVING AGE > 30 ORDER by AGE;
     
 3)liste des acteurs pour un film donné:
  
