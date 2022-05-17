@@ -43,7 +43,7 @@
 
     
 
-    modification Aurore 👍
+    modifications Aurore 👍
     ```
     UPDATE Movies SET creation date='2022-05-17',update date=(NOW()) WHERE id ="40"
     DELETE FROM actors WHERE id = 29
