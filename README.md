@@ -19,7 +19,7 @@
     
 4) liste des films pour un acteur donné:
 
-    -SELECT `title` FROM Movies INNER JOIN actor_movies ON Movies.id = actor_movies.id_movies INNER JOIN actors ON actors.id = actor_movies.id_actors WHERE                  actors.first_name='Robert';
+    -SELECT `title` FROM Movies INNER JOIN actor_movies ON Movies.id = actor_movies.id_movies INNER JOIN actors ON actors.id = actor_movies.id_actors WHERE actors.first_name='Robert';
    
 5) ajouter un film
   
@@ -31,7 +31,7 @@
        
 7) modifier un film 
 
-        -UPDATE `Movies` SET `id`=[value-1],`title`=[value-2],`release date`=[value-3],`duration`=[value-4],`director`=[value-5],`creation date`=[value-6],`update date`=[value-7];
+        -UPDATE `Movies` SET `id`=NULL,`title`='avengers15',`release date`='2022-05-27',`duration`='02:47:51',`director`='scorsese',`creation date`='2022-05-17',`update date`='2022-05-17';
         
  8)supprimer un acteur
  

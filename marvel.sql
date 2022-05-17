@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : mar. 17 mai 2022 à 08:09
+-- Généré le : mar. 17 mai 2022 à 08:43
 -- Version du serveur :  8.0.19
 -- Version de PHP : 7.4.11
 
@@ -231,7 +231,7 @@ ALTER TABLE `actor_movies`
 --
 ALTER TABLE `Movies`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `title` (`title`,`release date`,`duration`);
+  ADD UNIQUE KEY `title` (`title`,`release date`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
