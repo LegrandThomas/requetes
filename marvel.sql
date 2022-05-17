@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : mar. 17 mai 2022 à 08:43
+-- Généré le : mar. 17 mai 2022 à 09:07
 -- Version du serveur :  8.0.19
 -- Version de PHP : 7.4.11
 
@@ -82,86 +82,86 @@ CREATE TABLE `actor_movies` (
 
 INSERT INTO `actor_movies` (`id_movies`, `id_actors`) VALUES
 (1, 3),
-(3, 3),
-(6, 3),
-(7, 3),
-(13, 3),
 (1, 4),
-(3, 4),
-(6, 4),
-(7, 4),
 (1, 5),
-(3, 5),
-(6, 5),
 (2, 6),
-(4, 7),
-(8, 7),
-(13, 7),
-(25, 7),
-(4, 8),
-(8, 8),
-(25, 8),
-(5, 9),
-(6, 9),
-(9, 9),
-(13, 9),
+(3, 3),
+(3, 4),
+(3, 5),
 (3, 10),
-(5, 10),
-(6, 10),
-(9, 10),
-(13, 10),
-(17, 10),
-(29, 10),
-(35, 10),
-(5, 11),
-(6, 11),
-(9, 11),
-(13, 11),
-(17, 11),
-(29, 11),
-(35, 11),
 (3, 12),
+(4, 7),
+(4, 8),
+(5, 9),
+(5, 10),
+(5, 11),
 (5, 12),
-(6, 12),
-(9, 12),
-(13, 12),
-(17, 12),
-(29, 12),
-(35, 12),
-(11, 15),
-(17, 15),
-(21, 15),
-(29, 15),
-(35, 15),
-(11, 16),
-(17, 16),
-(21, 16),
-(29, 16),
-(35, 16),
-(15, 17),
-(31, 17),
-(15, 18),
-(31, 18),
-(17, 19),
-(29, 19),
-(35, 19),
-(17, 20),
-(27, 20),
-(29, 20),
-(35, 20),
-(17, 21),
-(23, 21),
-(29, 21),
-(35, 21),
-(37, 21),
-(19, 23),
 (5, 25),
+(6, 3),
+(6, 4),
+(6, 5),
+(6, 9),
+(6, 10),
+(6, 11),
+(6, 12),
 (6, 25),
+(7, 3),
+(7, 4),
+(8, 7),
+(8, 8),
+(9, 9),
+(9, 10),
+(9, 11),
+(9, 12),
+(11, 15),
+(11, 16),
+(13, 3),
+(13, 7),
+(13, 9),
+(13, 10),
+(13, 11),
+(13, 12),
 (13, 25),
+(15, 17),
+(15, 18),
+(17, 10),
+(17, 11),
+(17, 12),
+(17, 15),
+(17, 16),
+(17, 19),
+(17, 20),
+(17, 21),
 (17, 25),
+(19, 23),
+(21, 15),
+(21, 16),
+(23, 21),
+(25, 7),
+(25, 8),
+(27, 20),
+(29, 10),
+(29, 11),
+(29, 12),
+(29, 15),
+(29, 16),
+(29, 19),
+(29, 20),
+(29, 21),
 (29, 25),
+(31, 17),
+(31, 18),
+(32, 26),
+(35, 10),
+(35, 11),
+(35, 12),
+(35, 15),
+(35, 16),
+(35, 19),
+(35, 20),
+(35, 21),
 (35, 25),
-(32, 26);
+(37, 21);
 
 -- --------------------------------------------------------
 
@@ -223,8 +223,8 @@ ALTER TABLE `actors`
 -- Index pour la table `actor_movies`
 --
 ALTER TABLE `actor_movies`
-  ADD PRIMARY KEY (`id_movies`,`id_actors`),
-  ADD KEY `id_actors` (`id_actors`);
+  ADD KEY `id_actors` (`id_actors`),
+  ADD KEY `id_movies` (`id_movies`,`id_actors`) USING BTREE;
 
 --
 -- Index pour la table `Movies`
@@ -247,18 +247,7 @@ ALTER TABLE `actors`
 -- AUTO_INCREMENT pour la table `Movies`
 --
 ALTER TABLE `Movies`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `actor_movies`
---
-ALTER TABLE `actor_movies`
-  ADD CONSTRAINT `actor_movies_ibfk_1` FOREIGN KEY (`id_actors`) REFERENCES `actors` (`id`),
-  ADD CONSTRAINT `actor_movies_ibfk_2` FOREIGN KEY (`id_movies`) REFERENCES `Movies` (`id`);
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
